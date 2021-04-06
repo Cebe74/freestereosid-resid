@@ -117,8 +117,10 @@ void setup() {
 
 
   // * Set Interrupt for Chip Select Pin *
-  attachInterrupt(digitalPinToInterrupt(pinCS), chipSelected, LOW);
-
+  // attachInterrupt(digitalPinToInterrupt(pinCS), chipSelected, LOW);
+  
+  // * Set Interrupt on RW Pin (experimental) *
+  attachInterrupt(digitalPinToInterrupt(pinRW), chipSelected, LOW);
 
   for (int i = 0; i < sidCount; i++) {
 
