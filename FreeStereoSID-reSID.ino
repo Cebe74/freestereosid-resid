@@ -115,13 +115,9 @@ void setup() {
   pinMode(pinPOTX, INPUT);
   pinMode(pinPOTY, INPUT);
 
-
   // * Set Interrupt for Chip Select Pin *
-  // attachInterrupt(digitalPinToInterrupt(pinCS), chipSelected, LOW);
+  attachInterrupt(digitalPinToInterrupt(pinCS), chipSelected, LOW);
   
-  // * Set Interrupt on RW Pin (experimental) *
-  attachInterrupt(digitalPinToInterrupt(pinRW), chipSelected, LOW);
-
   for (int i = 0; i < sidCount; i++) {
 
     // *** Init SID Registers (is needed on Power Up for Jupiter Lander Module) ***
